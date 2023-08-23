@@ -59,7 +59,7 @@ namespace QuickLook
                     new MenuItem(TranslationHelper.Get("Icon_Quit"),
                         (sender, e) => System.Windows.Application.Current.Shutdown())
                 }),
-                Visible = SettingHelper.Get("ShowTrayIcon", true)
+                Visible = SettingHelper.Get("ShowTrayIcon", false)
             };
 
             _icon.ContextMenu.Popup += (sender, e) => { _itemAutorun.Checked = AutoStartupHelper.IsAutorun(); };
